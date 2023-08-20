@@ -3,7 +3,7 @@ import {AppContext} from '../context/AppContext';
 
 const Currency=()=>{
     const {currency,dispatch}=useContext(AppContext);
-    const [isOpen, setIsOpen]=useState(false);
+    const [isOpen, setIsOpen]=useState(true);
 
     const currencyChange=(currency)=>{
         dispatch({
@@ -38,11 +38,12 @@ const Currency=()=>{
                 style={{backgroundColor: "#93e399", color: "#fff"}}
                 onClick={()=>setIsOpen(!isOpen)}
             >Currency{'('}{currency_label()}{')'}</button>
-            <ul className={`custom-menu dropdown-menu ${isOpen?'show':''}`}>
+            <ul style={{backgroundColor: "#93e399", color: "#fff"}} className={`custom-menu dropdown-menu ${isOpen?'show':''}`}>
                 <li>
                     <button
                       className="dropdown-item"
                       type="button"
+                      style={{backgroundColor: "#93e399", color: "#fff"}}
                       onClick={()=>currencyChange('$')}
                     >$ Dollar</button>
                 </li>
@@ -51,6 +52,7 @@ const Currency=()=>{
                     <button
                         className="dropdown-item"
                         type="button"
+                        style={{backgroundColor: "#93e399", color: "#fff"}}
                         onClick={()=>currencyChange('£')}
                     >£ Pound</button>
                 </li>
@@ -59,6 +61,7 @@ const Currency=()=>{
                     <button
                         className="dropdown-item"
                         type="button"
+                        style={{backgroundColor: "#93e399", color: "#fff"}}
                         onClick={()=>currencyChange('€')}
                     >€ Euro</button>
                 </li>
@@ -67,6 +70,7 @@ const Currency=()=>{
                     <button
                         className="dropdown-item"
                         type="button"
+                        style={{backgroundColor: "#93e399", color: "#fff"}}
                         onClick={()=>currencyChange('₹')}
                     >₹ Rupee</button>
                 </li>
