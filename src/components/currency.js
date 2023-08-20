@@ -3,7 +3,7 @@ import {AppContext} from '../context/AppContext';
 
 const Currency=()=>{
     const {currency,dispatch}=useContext(AppContext);
-    const [isOpen, setIsOpen]=useState(true);
+    const [isOpen, setIsOpen]=useState(false);
 
     const currencyChange=(currency)=>{
         dispatch({
